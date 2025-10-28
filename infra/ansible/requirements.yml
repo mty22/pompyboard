@@ -1,0 +1,8 @@
+---
+collections:
+  # https://galaxy.ansible.com/ui/repo/published/community/general/docs/
+  - name: community.general
+    version: "11.4.0"
+  # https://galaxy.ansible.com/ui/repo/published/ansible/posix/docs/
+  - name: ansible.posix
+    version: "2.1.0"

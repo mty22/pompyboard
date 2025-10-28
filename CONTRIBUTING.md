@@ -6,15 +6,16 @@
 
 ## Project overview
 
-The pompyboard project can be roughly broken down into 5 parts:
+The pompyboard project can be roughly broken down into 6 parts:
 
-| Part     | Location                                       |
-| -------- | ---------------------------------------------- |
-| PCB      | [`./pcb/`](./pcb/)                             |
-| Firmware | [`./firmware/`](./firmware/)                   |
-| 3D model | [`./3d/`](./3d/)                               |
-| Website  | [`./web/`](./web/)                             |
-| Driver   | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
+| Part           | Location                                       |
+| -------------- | ---------------------------------------------- |
+| PCB            | [`./pcb/`](./pcb/)                             |
+| Firmware       | [`./firmware/`](./firmware/)                   |
+| 3D model       | [`./3d/`](./3d/)                               |
+| Website        | [`./web/`](./web/)                             |
+| Infrastructure | [`./infra/`](./infra/)                         |
+| Driver         | [pompyboard/OpenTabletDriver][otd-fork] (fork) |
 
 ## Setting up development environment
 
