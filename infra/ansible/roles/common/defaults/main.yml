@@ -12,6 +12,7 @@ common_base_packages:
   - htop
   - iotop
   - iftop
+  - tree
 
 common_base_directories:
   - /srv

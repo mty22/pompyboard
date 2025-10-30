@@ -24,3 +24,14 @@
       ansible.builtin.import_role:
         name: ipr-cnrs.nftables
       tags: nftables
+
+    - name: Import docker setup role
+      ansible.builtin.import_role:
+        name: geerlingguy.docker
+      tags: docker_setup
+
+    - name: Import docker role
+      ansible.builtin.import_role:
+        name: docker
+      tags: docker
+

@@ -1,0 +1,11 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for roles/docker
+
+docker_supporting_packages:
+  - python3-requests
+
+docker_base_directories:
+  - /storage/docker  # Note: /storage is created in common role.
+
+docker_image_storage_path: /storage/docker/images

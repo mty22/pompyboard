@@ -1,0 +1,26 @@
+---
+- name: Create Docker base directories
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: '0755'
+  loop: "{{ docker_base_directories }}"
+
+- name: Ensure docker images directory exists
+  ansible.builtin.file:
+    path: "{{ docker_image_storage_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: "0710"
+
+- name: Deploy docker.json
+  ansible.builtin.template:
+    src: etc/docker/daemon.json.j2
+    dest: /etc/docker/daemon.json
+    owner: root
+    group: root
+    mode: "0644"
+  notify: Restart docker service

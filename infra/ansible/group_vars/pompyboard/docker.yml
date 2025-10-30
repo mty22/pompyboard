@@ -1,0 +1,19 @@
+---
+# Uses 'geerlingguy.docker' role.
+docker_edition: 'ce'
+docker_packages:
+    - "docker-{{ docker_edition }}"
+    - "docker-{{ docker_edition }}-cli"
+    - "docker-{{ docker_edition }}-rootless-extras"
+docker_packages_state: present
+
+# Uses 'docker' role.
+docker_containers:
+  # Test containers.
+  - name: hello-world
+    image: hello-world:latest
+
+  - name: nginx
+    image: nginx:latest
+    ports:
+      - "80:80"

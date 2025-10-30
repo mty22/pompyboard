@@ -1,0 +1,6 @@
+---
+- name: Install supporting Docker packages
+  ansible.builtin.package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ docker_supporting_packages }}"

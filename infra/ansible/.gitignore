@@ -4,3 +4,4 @@ collections/ansible_collections/
 roles/metno.chrony/
 roles/robertdebock.fail2ban/
 roles/ipr-cnrs.nftables/
+roles/geerlingguy.docker/

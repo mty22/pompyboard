@@ -6,6 +6,9 @@ collections:
   # https://galaxy.ansible.com/ui/repo/published/ansible/posix/docs/
   - name: ansible.posix
     version: "2.1.0"
+  # https://galaxy.ansible.com/ui/repo/published/community/docker/docs/
+  - name: community.docker
+    version: 4.8.2
 
 roles:
   # https://galaxy.ansible.com/ui/standalone/roles/metno/chrony/documentation/
@@ -17,3 +20,6 @@ roles:
   # https://galaxy.ansible.com/ui/standalone/roles/ipr-cnrs/nftables/documentation/
   - name: ipr-cnrs.nftables
     version: v2.2.6
+  # https://galaxy.ansible.com/ui/standalone/roles/geerlingguy/docker/documentation/
+  - name: geerlingguy.docker
+    version: 7.8.0

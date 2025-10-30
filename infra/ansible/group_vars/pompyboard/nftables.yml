@@ -3,5 +3,40 @@
 # TODO - Add nftables rules for podman/docker.
 
 nft_input_group_rules:
+  200 docker container inbound:
+    - iifname $docker_bridge_ifname ct state new accept comment "Allow container -> host input (if needed)"
+
   310 ssh ingress allow:
     - tcp dport 22 accept
+
+  320 ssh ingress allow:
+    - tcp dport 80 accept
+
+nft_define_group:
+  docker_bridge_ifname:
+    desc: "Docker default bridge interface"
+    name: docker_bridge_ifname
+    value: "docker0"
+  host_uplink_ifname:
+    desc: "Host uplink interface for containers NAT"
+    name: host_uplink_ifname
+    value: "{{ ansible_default_ipv4.interface }}"
+
+# Forward chain rules for Docker bridge traffic
+nft_forward_group_rules:
+  100 docker bridge forward allow:
+    - iifname $docker_bridge_ifname accept
+    - oifname $docker_bridge_ifname accept
+  110 docker to host forward allow:
+    - iifname $docker_bridge_ifname oifname $host_uplink_ifname ct state established,related accept
+  120 host to docker forward allow:
+    - iifname $host_uplink_ifname oifname $docker_bridge_ifname ct state established,related accept
+
+# NAT / masquerade for outbound from containers
+nft__nat_group_postrouting_rules:
+  100 docker masquerade:
+    - oifname $host_uplink_ifname masquerade comment "Masquerade Docker container outbound"
+
+nft_global_group_rules:
+  005 global established/related:
+    - ct state established,related accept
