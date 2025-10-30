@@ -1,0 +1,2 @@
+---
+ansible_managed: "This file is managed by Ansible role: {{ role_path | basename }}"
