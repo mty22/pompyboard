@@ -1,0 +1,7 @@
+---
+
+# TODO - Add nftables rules for podman/docker.
+
+nft_input_group_rules:
+  310 ssh ingress allow:
+    - tcp dport 22 accept

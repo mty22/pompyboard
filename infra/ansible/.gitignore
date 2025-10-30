@@ -3,3 +3,4 @@ collections/ansible_collections/
 # Ensure that Galaxy roles are added to .gitignore
 roles/metno.chrony/
 roles/robertdebock.fail2ban/
+roles/ipr-cnrs.nftables/

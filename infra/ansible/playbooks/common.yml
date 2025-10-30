@@ -19,3 +19,8 @@
       ansible.builtin.import_role:
         name: robertdebock.fail2ban
       tags: fail2ban
+
+    - name: Import nftables role
+      ansible.builtin.import_role:
+        name: ipr-cnrs.nftables
+      tags: nftables

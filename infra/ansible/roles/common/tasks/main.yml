@@ -1,6 +1,5 @@
 #SPDX-License-Identifier: MIT-0
 ---
-# tasks file for roles/common
 - name: Import install tasks
   ansible.builtin.import_tasks: install.yml
   tags:
@@ -12,3 +11,9 @@
   tags:
     - common
     - common_config
+
+- name: Import service tasks
+  ansible.builtin.import_tasks: service.yml
+  tags:
+    - common
+    - common_service

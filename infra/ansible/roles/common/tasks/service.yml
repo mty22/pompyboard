@@ -1,0 +1,7 @@
+---
+# We use nftables instead of firewalld.
+- name: Disable and mask firewalld.service
+  ansible.builtin.systemd:
+    name: firewalld.service
+    enabled: false
+    masked: true
