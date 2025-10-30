@@ -14,3 +14,8 @@
       ansible.builtin.import_role:
         name: metno.chrony
       tags: chrony
+
+    - name: Import fail2ban role
+      ansible.builtin.import_role:
+        name: robertdebock.fail2ban
+      tags: fail2ban

@@ -1,0 +1,3 @@
+---
+fail2ban_bantime: 900
+fail2ban_sender: "root@{{ inventory_hostname }}"

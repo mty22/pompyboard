@@ -11,3 +11,6 @@ roles:
   # https://galaxy.ansible.com/ui/standalone/roles/metno/chrony/documentation/
   - name: metno.chrony
     version: 4.1.0
+  # https://galaxy.ansible.com/ui/standalone/roles/robertdebock/fail2ban/documentation/
+  - name: robertdebock.fail2ban
+    version: 5.0.6
