@@ -39,10 +39,10 @@ pip install -r requirements.txt
 
 # Ansible collections and roles
 
-Install ansible collections:
+Install ansible collections and roles:
 
 ```
-ansible-galaxy collection install -r requirements.yml --force
+ansible-galaxy install -r requirements.yml --force
 ```
 
 # Adding or creating roles

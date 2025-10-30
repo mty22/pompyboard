@@ -1,0 +1,12 @@
+---
+chrony_ntp_servers:
+  - time.cloudflare.com
+  - 0.pool.ntp.org
+  - 1.pool.ntp.org
+  - 2.pool.ntp.org
+
+chrony_log_enable: true
+chrony_log: measurements statistics tracking
+chrony_logdir: /var/log/chrony/
+
+chrony_timezone: "Etc/UTC"

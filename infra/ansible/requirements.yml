@@ -6,3 +6,8 @@ collections:
   # https://galaxy.ansible.com/ui/repo/published/ansible/posix/docs/
   - name: ansible.posix
     version: "2.1.0"
+
+roles:
+  # https://galaxy.ansible.com/ui/standalone/roles/metno/chrony/documentation/
+  - name: metno.chrony
+    version: 4.1.0

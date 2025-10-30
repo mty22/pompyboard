@@ -9,3 +9,8 @@
       ansible.builtin.import_role:
         name: common
       tags: common
+
+    - name: Import chrony role
+      ansible.builtin.import_role:
+        name: metno.chrony
+      tags: chrony
