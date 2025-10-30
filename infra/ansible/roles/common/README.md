@@ -5,7 +5,7 @@ Common role which can run across all hosts.
 ## Example Playbook
 
 ```
-ansible-playbook -Dkk -i inventory.yml playbooks/common.yml
+ansible-playbook -DkK -i inventory/production.yml playbooks/common.yml
 ```
 
 ## License

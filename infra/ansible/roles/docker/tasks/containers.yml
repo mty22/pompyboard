@@ -3,13 +3,14 @@
   community.docker.docker_image:
     name: "{{ item.image }}"
     source: pull
+  when: (item.state | default('started')) !='stopped'
   loop: "{{ docker_containers }}"
 
 - name: Run Docker containers
   community.docker.docker_container:
     name: "{{ item.name }}"
     image: "{{ item.image }}"
-    state: started
+    state: "{{ item.state | default('started') }}"
     restart_policy: "{{ item.restart_policy | default('always') }}"
     ports: "{{ item.ports | default(omit) }}"
     env: "{{ item.env | default(omit) }}"
@@ -18,4 +19,3 @@
 
 - name: Prune old images and volumes
   ansible.builtin.command: docker system prune -a -f
-  changed_when: false

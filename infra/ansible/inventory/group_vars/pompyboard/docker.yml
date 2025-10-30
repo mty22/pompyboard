@@ -12,6 +12,7 @@ docker_containers:
   # Test containers.
   - name: hello-world
     image: hello-world:latest
+    state: stopped
 
   - name: nginx
     image: nginx:latest
