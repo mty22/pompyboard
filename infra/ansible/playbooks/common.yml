@@ -1,0 +1,11 @@
+---
+# Common role playbook.
+- name: Configure all servers
+  hosts: all
+  become: true
+  serial: "{{ serial_num | default(10) }}"
+  tasks:
+    - name: Import common role
+      ansible.builtin.import_role:
+        name: common
+      tags: common

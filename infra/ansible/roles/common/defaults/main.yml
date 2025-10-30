@@ -1,0 +1,19 @@
+#SPDX-License-Identifier: MIT-0
+---
+
+common_base_supporting_repo_packages:
+  - epel-release
+
+common_base_packages:
+  - wget
+  - vim-enhanced
+  - curl
+  - git
+  - htop
+  - iotop
+  - iftop
+
+common_base_directories:
+  - /srv
+  - /srv/scripts
+  - /storage

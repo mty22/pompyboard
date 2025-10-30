@@ -1,1 +1,5 @@
 ---
+pompyboard:
+  hosts:
+    vm-pompyboard.idle.host:
+      ansible_user: root

@@ -136,7 +136,7 @@ Mount the LV:
 
 ```
 mkdir /storage
-echo "UUID=$(blkid|grep -i storage | cut -d\" -f2)   /storage   xfs   defaults,noatime   0 0" >> /etc/fstab
+echo "UUID=$(blkid | grep -i storage | cut -d\" -f2)   /storage   xfs   defaults,noatime   0 0" >> /etc/fstab
 systemctl daemon-reload
 mount -a
 ```

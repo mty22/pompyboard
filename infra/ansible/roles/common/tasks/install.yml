@@ -1,0 +1,12 @@
+---
+- name: Install supporting repos
+  ansible.builtin.package:
+    state: present
+    name: "{{ item }}"
+  loop: "{{ common_base_supporting_repo_packages }}"
+
+- name: Install base packages
+  ansible.builtin.package:
+    state: present
+    name: "{{ item }}"
+  loop: "{{ common_base_packages }}"
